@@ -15,7 +15,9 @@ session_start();
         <div class="top">
 		<h2>Hello 
 		<?php
-			echo $_SESSION["firstN"];
+			// echo $_SESSION["firstN"];
+			$userId = $_SESSION["userId"];
+			echo "SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'";
 		?>
         </h2>
 	    <div class="selections">
@@ -27,10 +29,11 @@ session_start();
 			include('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
-			$_SESSION["studExist"] = false;
+			$_SESSION["studExist"] = false; // note note note note note note note note note note
+			// maybe can add a colum called studExit to table?? idk error note this in commit
 			$adminCancel = false;
 			$noApp = false;
-			$studid = $_SESSION["studID"];
+			$studid = "SELECT StudentId FROM Proj2Students WHERE `id` = '$userId'";
 
 			// fetch the specific student from the DB based on the 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
