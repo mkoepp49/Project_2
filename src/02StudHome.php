@@ -13,11 +13,13 @@ session_start();
     <div id="login">
       <div id="form">
         <div class="top">
-		<h2>Hello 
+		<h2>Hello
 		<?php
 			// echo $_SESSION["firstN"];
+			//echo $_SESSION["firstN"];
 			$userId = $_SESSION["userId"];
-			echo "SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'";
+			echo "select FirstName from Proj2Students where `id` = '$userId'"
+			//echo "select FirstName from Proj2Students where `id` = '$userId'";
 		?>
         </h2>
 	    <div class="selections">
