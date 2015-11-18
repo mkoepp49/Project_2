@@ -1,0 +1,6 @@
+"SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT LastName FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT StudentID FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Email FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Major FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Status FROM Proj2Students WHERE `id` = '$userId'"
