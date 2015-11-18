@@ -13,11 +13,11 @@ if($_POST["finish"] == 'Cancel')
 // assign the needed variables from prior file
 else
 {
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
-	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
+	$firstn = "SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'";
+	$lastn = "SELECT LastName FROM Proj2Students WHERE `id` = '$userId'";
+	$studid = "SELECT StudentID FROM Proj2Students WHERE `id` = '$userId'";
+	$major = "SELECT Major FROM Proj2Students WHERE `id` = '$userId'";
+	$email = "SELECT Email FROM Proj2Students WHERE `id` = '$userId'"];
 	$advisor = $_SESSION["advisor"];
 	$apptime = $_SESSION["appTime"];
 	

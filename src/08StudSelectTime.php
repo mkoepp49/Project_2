@@ -8,7 +8,7 @@ if(isset($_POST["advisor"])){
 }
 // declare more variables needed
 $localAdvisor = $_SESSION["advisor"];
-$localMaj = $_SESSION["major"];
+$localMaj = "SELECT Major FROM Proj2Students WHERE `id` = '$userId'";
 
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
