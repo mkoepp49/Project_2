@@ -11,7 +11,7 @@ $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 // If the row's ID field matches the student's ID, retrieve the info and save to variables
 while($row = mysql_fetch_row($rs)){
-	if($row[3] == $_SESSION["studID"]){
+	if($row[3] == $_SESSION["userId"][3]){
 		
 		$_SESSION["userId"][1] = $row[1];
 		$_SESSION["userId"][2] = $row[2];
