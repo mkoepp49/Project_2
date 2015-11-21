@@ -13,10 +13,10 @@ $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 while($row = mysql_fetch_row($rs)){
 	if($row[3] == $_SESSION["studID"]){
 		
-		$_SESSION["userId"][1]; = $row[1];
-		$_SESSION["userId"][2]; = $row[2];
-		$_SESSION["userId"][4]; = $row[4];
-		$_SESSION["userId"][5]; = $row[5];
+		$_SESSION["userId"][1] = $row[1];
+		$_SESSION["userId"][2] = $row[2];
+		$_SESSION["userId"][4] = $row[4];
+		$_SESSION["userId"][5] = $row[5];
 	}
 }
 
@@ -60,11 +60,11 @@ while($row = mysql_fetch_row($rs)){
 				  <label for="major">Major</label>
 				  <select id="major" name = "major">
 				  <!-- added the undecided engineering major option -->
-					<option <?php if($_SESSION["userId"][5]; == 'Undecided Engineering'){echo("selected");}?>>Undecided Engineering</option>
-					<option <?php if($_SESSION["userId"][5]; == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
-					<option <?php if($_SESSION["userId"][5]; == 'Computer Science'){echo("selected");}?>>Computer Science</option>
-					<option <?php if($_SESSION["userId"][5]; == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
-					<option <?php if($_SESSION["userId"][5]; == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
+					<option <?php if($_SESSION["userId"][5] == 'Undecided Engineering'){echo("selected");}?>>Undecided Engineering</option>
+					<option <?php if($_SESSION["userId"][5] == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
+					<option <?php if($_SESSION["userId"][5] == 'Computer Science'){echo("selected");}?>>Computer Science</option>
+					<option <?php if($_SESSION["userId"][5] == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
+					<option <?php if($_SESSION["userId"][5] == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
 <!-- someday
 					<option <?php if($_SESSION["major"] == 'Africana Studies'){echo("selected");}?>>Africana Studies</option>
 					<option <?php if($_SESSION["major"] == 'American Studies'){echo("selected");}?>>American Studies</option>
