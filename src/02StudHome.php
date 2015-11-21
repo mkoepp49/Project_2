@@ -17,9 +17,10 @@ session_start();
 		<?php
 			// echo $_SESSION["firstN"];
 			//echo $_SESSION["firstN"];
-			$userId = $_SESSION["userId"];
+			//$userId = $_SESSION["userId"];
 			//echo "select FirstName from Proj2Students where `id` = '$userId'"
-			echo $userId[1];
+			//echo $userId[1];
+			echo $_SESSION["userId"][1];
 		?>
         </h2>
 	    <div class="selections">
@@ -36,7 +37,8 @@ session_start();
 			$adminCancel = false;
 			$noApp = false;
 			//$studid = "SELECT StudentId FROM Proj2Students WHERE `id` = '$userId'";
-			$studid = "AB12345";
+			$studid = $_SESSION["userId"][3];
+
 			// fetch the specific student from the DB based on the 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

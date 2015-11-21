@@ -4,3 +4,14 @@
 "SELECT Email FROM Proj2Students WHERE `id` = '$userId'"
 "SELECT Major FROM Proj2Students WHERE `id` = '$userId'"
 "SELECT Status FROM Proj2Students WHERE `id` = '$userId'"
+
+
+-- KEY --
+
+ID = 0
+FN=1
+LN=2
+ID=3
+EML=4
+MJR=5
+STATUS=6
