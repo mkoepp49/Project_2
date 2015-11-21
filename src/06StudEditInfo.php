@@ -38,22 +38,22 @@ while($row = mysql_fetch_row($rs)){
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="firstN">First Name</label>
-				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $_SESSION["firstN"]?>>
+				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $_SESSION["userId"][1]?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 			  <label for="lastN">Last Name</label>
-			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $_SESSION["lastN"]?>>
+			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $_SESSION["userId"][2]?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="studID">Student ID</label>
-				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $_SESSION["studID"]?>>
+				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $_SESSION["userId"][3]?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="email">E-mail</label>
-				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $_SESSION["email"]?>>
+				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $_SESSION["userId"][4]?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
