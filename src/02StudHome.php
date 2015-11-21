@@ -18,8 +18,8 @@ session_start();
 			// echo $_SESSION["firstN"];
 			//echo $_SESSION["firstN"];
 			$userId = $_SESSION["userId"];
-			echo "select FirstName from Proj2Students where `id` = '$userId'"
-			//echo "select FirstName from Proj2Students where `id` = '$userId'";
+			//echo "select FirstName from Proj2Students where `id` = '$userId'"
+			echo $userId[1];
 		?>
         </h2>
 	    <div class="selections">
@@ -35,8 +35,8 @@ session_start();
 			// maybe can add a colum called studExit to table?? idk error note this in commit
 			$adminCancel = false;
 			$noApp = false;
-			$studid = "SELECT StudentId FROM Proj2Students WHERE `id` = '$userId'";
-
+			//$studid = "SELECT StudentId FROM Proj2Students WHERE `id` = '$userId'";
+			$studid = "AB12345";
 			// fetch the specific student from the DB based on the 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);

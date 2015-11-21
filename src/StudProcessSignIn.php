@@ -10,14 +10,18 @@ $debug = false;
 
 
 $firstName = strtoupper($_POST["firstN"]);
+$lastName = strtoupper($_POST["lastN"]);
 include('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 $sql = "select * from `Proj2Students` where `FirstName` = '$firstName' and `LastName` = '$lastName'";
-      $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-      $row = mysql_fetch_row($rs);
-      $userId = $row[0];
+$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+$row = mysql_fetch_row($rs);
+$userId = $row;
 
+
+// new idea: 11/20
+      // bascially store the entire row into session variable
 
 
 //$_SESSION["firstN"] = $FirstName;
