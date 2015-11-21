@@ -15,11 +15,7 @@ session_start();
         <div class="top">
 		<h2>Hello
 		<?php
-			// echo $_SESSION["firstN"];
-			//echo $_SESSION["firstN"];
-			//$userId = $_SESSION["userId"];
-			//echo "select FirstName from Proj2Students where `id` = '$userId'"
-			//echo $userId[1];
+			// Print First Name
 			echo $_SESSION["userId"][1];
 		?>
         </h2>
@@ -36,7 +32,8 @@ session_start();
 			// maybe can add a colum called studExit to table?? idk error note this in commit
 			$adminCancel = false;
 			$noApp = false;
-			//$studid = "SELECT StudentId FROM Proj2Students WHERE `id` = '$userId'";
+			
+			// selects studentId from DB
 			$studid = $_SESSION["userId"][3];
 
 			// fetch the specific student from the DB based on the 

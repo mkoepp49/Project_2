@@ -23,11 +23,11 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 			$COMMON = new Common($debug);
 			
 			// Set variables from the the database
-			$firstn = "SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'";
-			$lastn = "SELECT LastName FROM Proj2Students WHERE `id` = '$userId'";
-			$studid = "SELECT StudentID FROM Proj2Students WHERE `id` = '$userId'";
-			$major = "SELECT Major FROM Proj2Students WHERE `id` = '$userId'";
-			$email = "SELECT Email FROM Proj2Students WHERE `id` = '$userId'";
+			$firstn = $_SESSION["userId"][1];
+			$lastn = $_SESSION["userId"][2];
+			$studid = $_SESSION["userId"][3];
+			$major = $_SESSION["userId"][5];
+			$email = $_SESSION["userId"][4];
 			
 			// If the student rescheduled,
 			// grab the student from the appointment DB

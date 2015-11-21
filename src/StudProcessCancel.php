@@ -6,11 +6,11 @@ $COMMON = new Common($debug);
 
 // variables needed to update if user desires to cancel
 if($_POST["cancel"] == 'Cancel'){
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
-	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
+	$firstn = $_SESSION["userId"][1];
+	$lastn = $_SESSION["userId"][2];
+	$studid = $_SESSION["userId"][3];
+	$major = $_SESSION["userId"][5];
+	$email = $_SESSION["userId"][4];
 	
 	//remove stud from EnrolledID
 	$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";

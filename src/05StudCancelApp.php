@@ -20,11 +20,11 @@ $COMMON = new Common($debug);
 	    <div class="field">
 	    <?php
 			// the variables needed to cancel the appointment, if one exists
-			$firstn = $_SESSION["firstN"];
-			$lastn = $_SESSION["lastN"];
-			$studid = $_SESSION["studID"];
-			$major = $_SESSION["major"];
-			$email = $_SESSION["email"];
+			$firstn = $_SESSION["userId"][1];
+			$lastn = $_SESSION["userId"][2];
+			$studid = $_SESSION["userId"][3];
+			$major = $_SESSION["userId"][5];
+			$email = $_SESSION["userId"][4];
 			
 			// select the user from their DB query
 			$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";

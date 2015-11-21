@@ -5,6 +5,12 @@
 "SELECT Major FROM Proj2Students WHERE `id` = '$userId'"
 "SELECT Status FROM Proj2Students WHERE `id` = '$userId'"
 
+-- Top  code is old --
+-- new: $_SESSION["userId"][X];
+
+
+-- Requirments --
+calls to $sql , do we really need repeated calls? Since in the row already!
 
 -- KEY --
 
@@ -15,3 +21,23 @@ ID=3
 EML=4
 MJR=5
 STATUS=6
+
+
+-- UNCHAGED SESSIONS --
+- ProcessHome - resch
+
+- studProcessType - adivsor
+
+- 08Stud - all except major
+
+- 10stud - appTime ???
+
+- studprocessSch - advisor, apptime
+
+- studprocessCanel - cancel
+
+- 12stud - all
+
+- 
+
+--   --   --   ---   -
