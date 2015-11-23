@@ -17,19 +17,21 @@ then edit .htaccess file here in the same directory
 session_start();
 
 include('../CommonMethods.php');
-$debug = false;
+$debug = true;
 $Common = new Common($debug);
 
 // set the inputted values from the HTML form,
 // set the post values to upper to 
 // eliminate casesensitivity
-$_SESSION["UserN"] = strtoupper($_POST["UserN"]);
-$_SESSION["PassW"] = strtoupper($_POST["PassW"]);
+// $_SESSION["UserN"] = strtoupper($_POST["UserN"]);
+// $_SESSION["PassW"] = strtoupper($_POST["PassW"]);
 $_SESSION["UserVal"] = false;
 
 // the values to work with 
-$user = $_SESSION["UserN"];
-$pass = $_SESSION["PassW"];
+// $user = $_SESSION["UserN"];
+// $pass = $_SESSION["PassW"];
+$user = strtoupper($_POST["UserN"]);
+$pass = strtoupper($_POST["PassW"]);
 
 // find that user/pass in the sql database table
 $sql = "SELECT * FROM `Proj2Advisors` WHERE `Username` = '$user' AND `Password` = '$pass'";
@@ -38,6 +40,8 @@ $row = mysql_fetch_row($rs);
 
 // if the person is matched with DB
 if($row){
+	// set adminUserId to an array with all values from DB
+	$_SESSION["adminUserId"] = $row;
 	if($debug) { echo("<br>".var_dump($_SESSION)."<- Session variables above<br>"); }
 	else { header('Location: AdminUI.php'); }
 }

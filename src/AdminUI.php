@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$debug = false;
+$debug = true; // changed
 
 if($debug) { echo("Session variables-> ".var_dump($_SESSION)); }
 

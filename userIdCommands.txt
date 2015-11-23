@@ -57,3 +57,7 @@ Password:4
 Location:5
 
 *note this could be vastley different on other members' DB
+
+
+-- SESSIONS NOT CHANGED --
+AdminProcessSignIn - UserVal;
