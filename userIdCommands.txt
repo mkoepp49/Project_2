@@ -41,3 +41,19 @@ STATUS=6
 - 
 
 --   --   --   ---   -
+
+
+SKIPPED 06 BRANCH 
+
+
+--- ADMIN SIDE ---
+
+-- KEY -- 
+ID:0
+FirstName:1
+LastName:2
+UserName:3
+Password:4
+Location:5
+
+*note this could be vastley different on other members' DB
