@@ -73,7 +73,7 @@ adminProcessEdtiGroup.php - Delete, advisor, GroupApp;
 adminConfridmEditGroup - delete, groupapp , 
 '' proceedEditGroup : uses same above, GroupApp etc;
 adminConfirmEditGroup - Delete, GroupApp;
-adminCreateNewAdv - PassCon, 
+adminCreateNewAdv - PassCon, idk if i need this?
 adminCreateNew.php - 67 - changed to fit my code
-
+AdminProcessCreateNew :::: NOT BEING USED AT ALL!!
 
