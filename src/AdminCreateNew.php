@@ -1,5 +1,25 @@
 <?php
-  session_start();
+  session_start(); // changed
+  // options: delete this file, and just pass the values into adminCreateNew...
+// 
+
+// Set the variables needed to keep going with the creation
+$_SESSION["AdvF"] = $_POST["firstN"];
+$_SESSION["AdvL"] = $_POST["lastN"];
+$_SESSION["AdvUN"] = $_POST["UserN"];
+$_SESSION["AdvPW"] = $_POST["PassW"];
+$_SESSION["AdvRN"] = $_POST["OfficeNum"];
+$_SESSION["PassCon"] = false;
+
+// If password is confirmed, then proceed
+// if($_POST["PassW"] == $_POST["ConfP"]){
+// 	header('Location: AdminCreateNew.php');
+// }
+// Otherwise, reloop to the file because not verified
+if($_POST["PassW"] != $_POST["ConfP"]){
+	$_SESSION["PassCon"] = true;
+	header('Location: AdminCreateNewAdv.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +64,8 @@
       }
 	  // Otherwise, insert the new adivisor successfully
       else{
-  			$sql = "INSERT INTO `Proj2Advisors`(`FirstName`, `LastName`, `Username`, `Password`, `RoomNumber`) 
+      	// changed to fit my code:::
+  			$sql = "INSERT INTO `Proj2Advisors`(`FirstName`, `LastName`, `Username`, `Password`, `Location`) 
   			VALUES ('$first', '$last', '$user', '$pass', '$offNum')";
         echo ("<h3>$first $last<h3>");
         $rs = $Common->executeQuery($sql, "Advising Appointments");

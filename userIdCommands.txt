@@ -67,7 +67,13 @@ Location:5
 AdminProcessSignIn - UserVal;
 ADMIN UI - PassCon;
 adminProcessSchedule - advisor;
-adminConfirmSchGroupline - 91: unessecary call?
+adminConfirmSchGroupline - 91: unessecary call? ; 
+adminProcessEdit.php - advisor;
+adminProcessEdtiGroup.php - Delete, advisor, GroupApp;
+adminConfridmEditGroup - delete, groupapp , 
+'' proceedEditGroup : uses same above, GroupApp etc;
 adminConfirmEditGroup - Delete, GroupApp;
+adminCreateNewAdv - PassCon, 
+adminCreateNew.php - 67 - changed to fit my code
 
 

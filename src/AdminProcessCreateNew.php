@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+
+// options: delete this file, and just pass the values into adminCreateNew...
+// 
+
 // Set the variables needed to keep going with the creation
 $_SESSION["AdvF"] = $_POST["firstN"];
 $_SESSION["AdvL"] = $_POST["lastN"];
