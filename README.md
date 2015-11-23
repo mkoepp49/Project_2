@@ -60,34 +60,17 @@ The number of $_SESSION variables is way too high. Eliminate all but â€˜userIDâ€
 
 ## Original Code Issues
 
-- Some of the original code needed work:
+###Some of the original code needed work:
 
-src/AdminPrintSchedule.php -- 
-src/AdminScheduleApp.php -- forgot to close comment, which hid submit button
-src/AdminSearchApp.php -- wrong type of comment, printed out to webpage
+- src/AdminPrintSchedule.php -- wrong CSS file
+- src/AdminScheduleApp.php -- forgot to close comment, which hid submit button
+- src/AdminSearchApp.php -- wrong type of comment, printed out to webpage
 
 
 ## GitHub Help
 
 ###How to set up folder and get latest version of proj2
 
->make folder, go to folder in terminal/git bash
->git init
->git clone https://github.com/mkoepp49/Project_2.git
-
-###How to push your changes
-
-*shows what files have been changed*
->git status
-*adds changed files push*
->git add .
->git commit -m "message"
->git push origin master
+>make folder go to folder in terminal/git bash
 
 
-###How to pull latest changes (after first time onwards)
-
-*shows what files have been changed on github*
->git status
->git pull origin master
-'''
