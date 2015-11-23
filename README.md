@@ -79,7 +79,6 @@ The number of $_SESSION variables is way too high. Eliminate all but â€˜userIDâ€
 
 *shows what files have been changed*
 - git status
-*adds changed files push*
 - git add .
 - git commit -m "message"
 - git push origin master
