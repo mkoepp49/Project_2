@@ -30,7 +30,7 @@ The number of $_SESSION variables is way too high. Eliminate all but â€˜userIDâ€
 - [ ] DB Data Pts
 - [ ] Work Screen Fix
 - [ ] CSS Change
-- [x] To Many Session
+- [x] Too Many Sessions
 
 ## Issues
 ```
