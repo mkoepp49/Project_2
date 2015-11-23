@@ -33,8 +33,9 @@ The number of $_SESSION variables is way too high. Eliminate all but â€˜userIDâ€
 - [x] Too Many Sessions
 
 ## Issues
-```
+
 :exclamation: 
+```
 :::
 :: What I did was reduce $_SESSIONS by making all SESSIONS into ONE SESSION:array.
 :: I call the DB only once in the begining. 
@@ -44,18 +45,17 @@ The number of $_SESSION variables is way too high. Eliminate all but â€˜userIDâ€
 :: Rubric says "rest can pull info from the DB when needed."
 :: Does this mean that each time I need a value, I have to call DB?
 :: I did not go this route because it would only add more redundant code (calling DB in each file)
-:::
+::: 
+```
+
 :exclamation: 
 ```
-```
-:exclamation: 
 ::Since we have different DB, current version of git will not work with all
 :::
 ::::Main changes: 
 ::password/login in commonmethods
 ::proj2advisors::
 -- Location vs RoomNumber
-:exclamation: 
 ```
 
 ## Original Code Issues
@@ -70,21 +70,25 @@ src/AdminSearchApp.php -- wrong type of comment, printed out to webpage
 ## GitHub Help
 
 ###How to set up folder and get latest version of proj2
-
+'''
 > make folder, go to folder in terminal/git bash
 > git init
 > git clone https://github.com/mkoepp49/Project_2.git
-
+'''
 ###How to push your changes
 
+'''
 *shows what files have been changed*
 > git status
 *adds changed files push*
 > git add .
 > git commit -m "message"
 > git push origin master
+'''
 
 ###How to pull latest changes (after first time onwards)
+'''
 *shows what files have been changed on github*
 > git status
 > git pull origin master
+'''
