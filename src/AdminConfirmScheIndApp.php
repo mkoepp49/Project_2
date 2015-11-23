@@ -82,8 +82,11 @@ $COMMON = new Common($debug);
 			}
 			
 			// Select user ID from the DB query
-			$User = $_SESSION["UserN"];
-			$Pass = $_SESSION["PassW"];
+			$User = $_SESSION["adminUserId"][3];
+          	$Pass = $_SESSION["adminUserId"][4];
+
+          	// calls DB, just to double check if username and password still the same
+          	// also $_SESSION["adminUserId"][0] would give the id, but calling DB for protection
 			$sql = "select `id` from `Proj2Advisors` where `Username` = '$User' and `Password` = '$Pass'";
 			$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 			$row = mysql_fetch_row($rs);
