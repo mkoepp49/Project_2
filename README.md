@@ -1,7 +1,8 @@
 # Project_2
+
 ## Tasks
 
-
+```
 Advisors
 
 NAME
@@ -9,7 +10,9 @@ The advisors want two more data points added somewhere to the DB, where their re
 
 NAME
 The “work screen” (or where work shows up) is too skinny, make larger or replace so text takes up more space.
+```
 
+```
 Administration
 
 NAME
@@ -20,6 +23,7 @@ All footers should be an inserted “include” so if a change needs to happen, 
 
 ELISHA
 The number of $_SESSION variables is way too high. Eliminate all but ‘userID’. If needed, some others can stay with negotiation. The rest can pull info from the DB when needed. This is a major code addition.
+```
 
 ## Tasks Compelte
 
@@ -29,7 +33,7 @@ The number of $_SESSION variables is way too high. Eliminate all but ‘userID�
 - [x] To Many Session
 
 ## Issues
-
+```
 :exclamation: 
 :::
 :: What I did was reduce $_SESSIONS by making all SESSIONS into ONE SESSION:array.
@@ -42,7 +46,8 @@ The number of $_SESSION variables is way too high. Eliminate all but ‘userID�
 :: I did not go this route because it would only add more redundant code (calling DB in each file)
 :::
 :exclamation: 
-
+```
+```
 :exclamation: 
 ::Since we have different DB, current version of git will not work with all
 :::
@@ -51,7 +56,7 @@ The number of $_SESSION variables is way too high. Eliminate all but ‘userID�
 ::proj2advisors::
 -- Location vs RoomNumber
 :exclamation: 
-
+```
 
 ## Original Code Issues
 
@@ -60,3 +65,26 @@ The number of $_SESSION variables is way too high. Eliminate all but ‘userID�
 src/AdminPrintSchedule.php -- 
 src/AdminScheduleApp.php -- forgot to close comment, which hid submit button
 src/AdminSearchApp.php -- wrong type of comment, printed out to webpage
+
+
+## GitHub Help
+
+###How to set up folder and get latest version of proj2
+
+> make folder, go to folder in terminal/git bash
+> git init
+> git clone https://github.com/mkoepp49/Project_2.git
+
+###How to push your changes
+
+*shows what files have been changed*
+> git status
+*adds changed files push*
+> git add .
+> git commit -m "message"
+> git push origin master
+
+###How to pull latest changes (after first time onwards)
+*shows what files have been changed on github*
+> git status
+> git pull origin master
