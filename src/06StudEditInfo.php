@@ -2,7 +2,14 @@
 session_start();
 
 $debug = false;
-include('../CommonMethods.php');
+include ('../Data.php');
+// check if main db has values yet
+$_SESSION['db'] = checkDb($firstN, $lastN);
+
+// if yes/no change session and get new values accordinly
+$row = getNew($_SESSION['db']);
+
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 // Select from the student DB
@@ -11,8 +18,7 @@ $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 // If the row's ID field matches the student's ID, retrieve the info and save to variables
 while($row = mysql_fetch_row($rs)){
-	if($row[3] == $_SESSION["userId"][3]){
-		
+	if($row[3] == $studid){
 		$_SESSION["userId"][1] = $row[1];
 		$_SESSION["userId"][2] = $row[2];
 		$_SESSION["userId"][4] = $row[4];

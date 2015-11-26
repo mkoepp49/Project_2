@@ -8,9 +8,10 @@ if(isset($_POST["advisor"])){
 }
 // declare more variables needed
 $localAdvisor = $_SESSION["advisor"];
-$localMaj = $_SESSION["userId"][5];;
+include ('../Data.php');
+$localMaj = $major;
 
-include('../CommonMethods.php');
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 // select the advisor, to be used to check if can use times

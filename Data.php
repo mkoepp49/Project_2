@@ -33,4 +33,34 @@ $major = $row[5];
 $email = $row[4];
 
 // need a function for last case, where it deleted from tmp db when its in main db...
+// need functino to check if in DB...
+
+
+function checkDb($fn, $ln){
+	// select the row from DB where first and last name match POST
+	$sql = "select * from `Proj2Students` where `FirstName` = '$fn' and `lastName` = '$ln'";
+	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+	$row = mysql_fetch_row($rs);
+	$userId = $row[0];
+	// not in main DB yet return 0
+	if (empty($row)) {
+		return 0;
+	}
+	else{
+		return 1;
+	}
+}
+
+function getNew($db){
+	if ($db){
+	$sql = "select * from `Proj2Students` where `Id` = '$userId'";
+	}
+	else {
+		$sql = "select * from `Proj2TempData` where `Id` = '$userId'";
+	}
+	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+	$row = mysql_fetch_row($rs);
+
+	return $row;
+}
 ?>
