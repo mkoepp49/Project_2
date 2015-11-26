@@ -21,7 +21,9 @@ else
 	if($_SESSION["studExist"] == false){
 		$sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`) values ('$firstn','$lastn','$studid','$email','$major')";
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-		// call function to delete from temp...
+		// call function to delete from temp
+		$done = delete($_SESSION['userId']);
+
 	}
 
 	// ************************ Lupoli 9-1-2015

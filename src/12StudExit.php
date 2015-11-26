@@ -17,9 +17,13 @@ session_start();
 	    <?php
 		// SET OF PRINT STATEMENTS
 			// if there is not reschedule
+			
 			$_SESSION["resch"] = false;			
 			if($_SESSION["status"] == "complete"){
 				echo "You have completed your sign-up for an advising appointment.";
+				// call function to delete from temp
+				include ('../Data.php');
+				//$done = delete($_SESSION['userId']);
 			}
 			// if the user does not have an appt
 			elseif($_SESSION["status"] == "none"){

@@ -63,4 +63,18 @@ function getNew($db){
 
 	return $row;
 }
+
+function delete($userId){
+	// if ($db){
+	// $sql = "select * from `Proj2Students` where `Id` = '$userId'";
+	// }
+	// else {
+	// 	$sql = "select * from `Proj2TempData` where `Id` = '$userId'";
+	// }
+	// $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+	// $row = mysql_fetch_row($rs);
+	mysql_query( "delete from Proj2TempData" );
+
+	return $row;
+}
 ?>

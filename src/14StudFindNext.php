@@ -1,14 +1,15 @@
 <?php
 session_start();
 $debug = false;
-include('../CommonMethods.php');
+include ('../Data.php');
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 if(isset($_POST["FindNext"])){
 	$_SESSION["FindNext"] = $_SPOST["FindNext"];
 }
-$localMaj = $_SESSION["major"];
-$studID = $SESSION["studID"];
+$localMaj = $major;
+$studID = $studid;
 $advisorID = $_SESSION["advisorID"];
 ?>
 
