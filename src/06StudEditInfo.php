@@ -3,28 +3,28 @@ session_start();
 
 $debug = false;
 include ('../Data.php');
-// check if main db has values yet
-$_SESSION['db'] = checkDb($firstN, $lastN);
+// // check if main db has values yet
+// $_SESSION['db'] = checkDb($firstN, $lastN);
 
-// if yes/no change session and get new values accordinly
-$row = getNew($_SESSION['db']);
+// // if yes/no change session and get new values accordinly
+// $row = getNew($_SESSION['db']);
 
-include_once('../CommonMethods.php');
-$COMMON = new Common($debug);
+// include_once('../CommonMethods.php');
+// $COMMON = new Common($debug);
 
-// Select from the student DB
-$sql = "select * from Proj2Students";
-$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+// // Select from the student DB
+// $sql = "select * from Proj2Students";
+// $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
-// If the row's ID field matches the student's ID, retrieve the info and save to variables
-while($row = mysql_fetch_row($rs)){
-	if($row[3] == $studid){
-		$_SESSION["userId"][1] = $row[1];
-		$_SESSION["userId"][2] = $row[2];
-		$_SESSION["userId"][4] = $row[4];
-		$_SESSION["userId"][5] = $row[5];
-	}
-}
+// // If the row's ID field matches the student's ID, retrieve the info and save to variables
+// while($row = mysql_fetch_row($rs)){
+// 	if($row[3] == $studid){
+// 		$_SESSION["userId"][1] = $row[1];
+// 		$_SESSION["userId"][2] = $row[2];
+// 		$_SESSION["userId"][4] = $row[4];
+// 		$_SESSION["userId"][5] = $row[5];
+// 	}
+// }
 
 ?>
 <html lang="en">
@@ -44,33 +44,33 @@ while($row = mysql_fetch_row($rs)){
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="firstN">First Name</label>
-				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $_SESSION["userId"][1]?>>
+				<input id="firstN" size="30" maxlength="50" type="text" name="firstN" required value=<?php echo $firstn?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 			  <label for="lastN">Last Name</label>
-			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $_SESSION["userId"][2]?>>
+			  <input id="lastN" size="30" maxlength="50" type="text" name="lastN" required value=<?php echo $lastn ?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="studID">Student ID</label>
-				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $_SESSION["userId"][3]?>>
+				<input id="studID" size="30" maxlength="7" type="text" pattern="[A-Za-z]{2}[0-9]{5}" title="AB12345" name="studID" disabled value=<?php echo $studid?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				<label for="email">E-mail</label>
-				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $_SESSION["userId"][4]?>>
+				<input id="email" size="30" maxlength="255" type="email" name="email" required value=<?php echo $email?>>
 			</div>
 			<div class="field">
 			<!-- Field to grab variable, to be sent off to process page-->
 				  <label for="major">Major</label>
 				  <select id="major" name = "major">
 				  <!-- added the undecided engineering major option -->
-					<option <?php if($_SESSION["userId"][5] == 'Undecided Engineering'){echo("selected");}?>>Undecided Engineering</option>
-					<option <?php if($_SESSION["userId"][5] == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
-					<option <?php if($_SESSION["userId"][5] == 'Computer Science'){echo("selected");}?>>Computer Science</option>
-					<option <?php if($_SESSION["userId"][5] == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
-					<option <?php if($_SESSION["userId"][5] == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
+					<option <?php if($major == 'Undecided Engineering'){echo("selected");}?>>Undecided Engineering</option>
+					<option <?php if($major == 'Computer Engineering'){echo("selected");}?>>Computer Engineering</option>
+					<option <?php if($major == 'Computer Science'){echo("selected");}?>>Computer Science</option>
+					<option <?php if($major == 'Mechanical Engineering'){echo("selected");}?>>Mechanical Engineering</option>
+					<option <?php if($major == 'Chemical Engineering '){echo("selected");}?>>Chemical Engineering</option>
 <!-- someday
 					<option <?php if($_SESSION["major"] == 'Africana Studies'){echo("selected");}?>>Africana Studies</option>
 					<option <?php if($_SESSION["major"] == 'American Studies'){echo("selected");}?>>American Studies</option>
