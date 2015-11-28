@@ -1,9 +1,21 @@
+<<<<<<< HEAD
+	html{ 
+	  /* my addition 
+	  background: linear-gradient(to right, yellow , black); */
+	  background-image: radial-gradient(farthest-corner at 45px 45px , #ffff32 0%, #000000 100%, rgba(0, 0, 0, 0) 19px);
+      /*background-color:
+      #99CCFF; */
+      font-family: Arial;
+      font-size: 10px;
+      position: relative;
+=======
 html{ 
       background-color: 
       #99CCFF; 
       font-family: Arial; 
       font-size: 13px; 
       position: relative; 
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
       }
 
       body{ 
@@ -30,12 +42,23 @@ html{
       -webkit-border-radius: 8px; 
       -moz-border-radius: 8px; 
       border-radius: 8px; 
+<<<<<<< HEAD
+	  /* my addition of a box shadow to the body */
+	  box-shadow: 5px 5px 2px black;
+      }
+
+      h1{ 
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+      font-size: 36px; 
+      text-align: center;
+=======
       }
 
 	h1{ 
       font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
       font-size: 36px; 
 	  text-align: center;
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
       line-height: 50px; 
       margin: 0; 
       padding: 0; 
@@ -44,7 +67,11 @@ html{
       h2{ 
       font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
       font-size: 24px; 
+<<<<<<< HEAD
+      text-align: center;
+=======
 	  text-align: center;
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
       line-height: 30px; 
       margin: 0; 
       padding: 0; 
@@ -72,12 +99,20 @@ html{
         width: 262px;
       }
 	  
+<<<<<<< HEAD
+      select{
+=======
 	  select{
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
 	  font-size: 18px;
 	  font-family: Arial, Helvetica, sans-serif;
 	  color: #444;
 	  position: relative;
+<<<<<<< HEAD
+      }
+=======
 	  }
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
       
       .button {
         background-color: #768089;
