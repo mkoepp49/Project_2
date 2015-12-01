@@ -1,6 +1,10 @@
 html{
+<<<<<<< HEAD
+	  background-image: radial-gradient(farthest-corner at 45px 45px , #ffff32 0%, #000000 100%, rgba(0, 0, 0, 0) 19px);
+=======
       background-color:
       #99CCFF;
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
       font-family: Arial;
       font-size: 13px;
       position: relative;
@@ -62,8 +66,28 @@ html{
       }
 
       input[type="text"], input[type="date"], textarea {
+<<<<<<< HEAD
+        /* background-color: #F6F6F6;
+		border: 2px solid #456879;
+		border-radius: 10px;
+		height: 22px;
+		width: 230px;  */
+
+		background-image:url(images/form_bg.jpg);
+		background-repeat:repeat-x;
+		border:1px solid #d1c7ac;
+		width: 230px;
+		color:#333333;
+		padding:5px;
+		margin-right:4px;
+		margin-bottom:8px;
+		font-family:tahoma, arial, sans-serif;
+		/*
+		border: 1px solid #999;
+=======
         background-color: #F6F6F6;
         border: 1px solid #999;
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
         color: #444;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
@@ -72,7 +96,12 @@ html{
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         width: 200px;
+<<<<<<< HEAD
+        */
+	  }
+=======
       }
+>>>>>>> 32ff335e3786dc5d3b965e0af1978d67b58f47f8
 
         select{
         font-size: 18px;

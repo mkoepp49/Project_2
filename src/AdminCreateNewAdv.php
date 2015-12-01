@@ -37,7 +37,8 @@ session_start();
       }
     ?>	
 		<!-- create a form action to the AdminProcessCreatNew.php file -->
-		<form action="AdminProcessCreateNew.php" method="post" name="Create">
+		<!-- <form action="AdminProcessCreateNew.php" method="post" name="Create"> -->
+		<form action="AdminCreateNew.php" method="post" name="Create">
 		<!-- field to pass -->
 		<div class="field">
 	      		<label for="firstN">First Name</label>

@@ -1,10 +1,11 @@
 <?php
 session_start();
 $debug = false;
-include('../CommonMethods.php');
+include ('../Data.php');
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
-$studID = $_SESSION["studID"];
+$studID = $studid ;
 
 ?>
 

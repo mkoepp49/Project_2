@@ -1,7 +1,8 @@
 <?php
 session_start();
 $debug = false;
-include('../CommonMethods.php');
+include ('../Data.php');
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 // if a student cancels on the process
@@ -13,11 +14,6 @@ if($_POST["finish"] == 'Cancel')
 // assign the needed variables from prior file
 else
 {
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
-	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
 	$advisor = $_SESSION["advisor"];
 	$apptime = $_SESSION["appTime"];
 	
@@ -25,6 +21,9 @@ else
 	if($_SESSION["studExist"] == false){
 		$sql = "insert into Proj2Students (`FirstName`,`LastName`,`StudentID`,`Email`,`Major`) values ('$firstn','$lastn','$studid','$email','$major')";
 		$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+		// call function to delete from temp
+		$done = delete($_SESSION['userId']);
+
 	}
 
 	// ************************ Lupoli 9-1-2015

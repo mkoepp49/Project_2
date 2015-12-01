@@ -19,15 +19,10 @@ $_SESSION["appTime"] = $_POST["appTime"]; // radio button selection from previou
 		<form action = "StudProcessSch.php" method = "post" name = "SelectTime">
 	    <?php
 			$debug = false;
-			include('../CommonMethods.php');
+			include ('../Data.php');
+			include_once('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
-			// Set variables from the sessions
-			$firstn = $_SESSION["firstN"];
-			$lastn = $_SESSION["lastN"];
-			$studid = $_SESSION["studID"];
-			$major = $_SESSION["major"];
-			$email = $_SESSION["email"];
 			
 			// If the student rescheduled,
 			// grab the student from the appointment DB

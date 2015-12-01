@@ -13,24 +13,26 @@ session_start();
     <div id="login">
       <div id="form">
         <div class="top">
-		<h2>Hello 
+		<h2>Hello
 		<?php
-			echo $_SESSION["firstN"];
+			include ('../Data.php');
+			echo $firstn;
 		?>
-        </h2>
+		</h2>
 	    <div class="selections">
 		<!-- These will go through processing before performing user desired action 
 		     based on which option the student chooses from the buttons listed-->
 		<form action="StudProcessHome.php" method="post" name="Home">
 	    <?php
 			$debug = false;
-			include('../CommonMethods.php');
+			include_once('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
-			$_SESSION["studExist"] = false;
+			$_SESSION["studExist"] = false; // note note note note note note note note note note
+			// maybe can add a colum called studExit to table?? idk error note this in commit
 			$adminCancel = false;
 			$noApp = false;
-			$studid = $_SESSION["studID"];
+			
 
 			// fetch the specific student from the DB based on the 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";

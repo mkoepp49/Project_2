@@ -1,16 +1,12 @@
 <?php
 session_start();
 $debug = false;
-include('../CommonMethods.php');
+include ('../Data.php');
+include_once('../CommonMethods.php');
 $COMMON = new Common($debug);
 
 // variables needed to update if user desires to cancel
 if($_POST["cancel"] == 'Cancel'){
-	$firstn = $_SESSION["firstN"];
-	$lastn = $_SESSION["lastN"];
-	$studid = $_SESSION["studID"];
-	$major = $_SESSION["major"];
-	$email = $_SESSION["email"];
 	
 	//remove stud from EnrolledID
 	$sql = "select * from Proj2Appointments where `EnrolledID` like '%$studid%'";

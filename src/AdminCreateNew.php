@@ -1,5 +1,25 @@
 <?php
-  session_start();
+  session_start(); // changed
+  // options: delete this file, and just pass the values into adminCreateNew...
+// 
+
+// Set the variables needed to keep going with the creation
+// $_SESSION["AdvF"] = $_POST["firstN"];
+// $_SESSION["AdvL"] = $_POST["lastN"];
+// $_SESSION["AdvUN"] = $_POST["UserN"];
+// $_SESSION["AdvPW"] = $_POST["PassW"];
+// $_SESSION["AdvRN"] = $_POST["OfficeNum"];
+$_SESSION["PassCon"] = false;
+
+// If password is confirmed, then proceed
+// if($_POST["PassW"] == $_POST["ConfP"]){
+// 	header('Location: AdminCreateNew.php');
+// }
+// Otherwise, reloop to the file because not verified
+if($_POST["PassW"] != $_POST["ConfP"]){
+	$_SESSION["PassCon"] = true;
+	header('Location: AdminCreateNewAdv.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +44,11 @@
 
 		<?php
 			// Variables sent in from the form action of AdminCreateNewAdv.php
-			$first = $_SESSION["AdvF"];
-			$last = $_SESSION["AdvL"];
-			$user = $_SESSION["AdvUN"];
-			$pass = $_SESSION["AdvPW"];
-			$offNum = $_SESSION["AdvRN"];
+			$first = $_POST["firstN"];
+			$last = $_POST["lastN"];
+			$user = $_POST["UserN"];
+			$pass = $_POST["PassW"];
+			$offNum = $_POST["OfficeNum"];
 			
 			include('../CommonMethods.php');
 			$debug = false;
@@ -44,7 +64,8 @@
       }
 	  // Otherwise, insert the new adivisor successfully
       else{
-  			$sql = "INSERT INTO `Proj2Advisors`(`FirstName`, `LastName`, `Username`, `Password`, `RoomNumber`) 
+      	// changed to fit my code:::
+  			$sql = "INSERT INTO `Proj2Advisors`(`FirstName`, `LastName`, `Username`, `Password`, `Location`) 
   			VALUES ('$first', '$last', '$user', '$pass', '$offNum')";
         echo ("<h3>$first $last<h3>");
         $rs = $Common->executeQuery($sql, "Advising Appointments");

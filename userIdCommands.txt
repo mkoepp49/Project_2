@@ -1,0 +1,79 @@
+"SELECT FirstName FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT LastName FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT StudentID FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Email FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Major FROM Proj2Students WHERE `id` = '$userId'"
+"SELECT Status FROM Proj2Students WHERE `id` = '$userId'"
+
+-- Top  code is old --
+-- new: $_SESSION["userId"][X];
+
+
+-- Requirments --
+calls to $sql , do we really need repeated calls? Since in the row already!
+
+-- KEY --
+
+ID = 0
+FN=1
+LN=2
+ID=3
+EML=4
+MJR=5
+STATUS=6
+
+
+-- UNCHAGED SESSIONS --
+- ProcessHome - resch
+
+- studProcessType - adivsor
+
+- 08Stud - all except major
+
+- 10stud - appTime ???
+
+- studprocessSch - advisor, apptime
+
+- studprocessCanel - cancel
+
+- 12stud - all
+
+- 
+
+--   --   --   ---   -
+
+
+SKIPPED 06 BRANCH 
+
+
+--- ADMIN SIDE ---
+
+
+-- KEY --
+
+$_SESSION["adminUserId"];
+
+ID:0
+FirstName:1
+LastName:2
+UserName:3
+Password:4
+Location:5
+
+*note this could be vastley different on other members' DB
+
+
+-- SESSIONS NOT CHANGED --
+AdminProcessSignIn - UserVal;
+ADMIN UI - PassCon;
+adminProcessSchedule - advisor;
+adminConfirmSchGroupline - 91: unessecary call? ; 
+adminProcessEdit.php - advisor;
+adminProcessEdtiGroup.php - Delete, advisor, GroupApp;
+adminConfridmEditGroup - delete, groupapp , 
+'' proceedEditGroup : uses same above, GroupApp etc;
+adminConfirmEditGroup - Delete, GroupApp;
+adminCreateNewAdv - PassCon, idk if i need this?
+adminCreateNew.php - 67 - changed to fit my code
+AdminProcessCreateNew :::: NOT BEING USED AT ALL!!
+
