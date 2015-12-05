@@ -31,12 +31,15 @@ $debug = false;
 	$COMMON = new Common($debug);
 
 	  // variable from session for username
-      $User = $_SESSION["adminUserId"][3];
+      $User = $_SESSION["UserN"];
 
 	 // grab the first name and last name of advisor from the table and set them to variables 
-      $id = $_SESSION["adminUserId"][0];
-      $FirstName = $_SESSION["adminUserId"][1];
-      $LastName = $_SESSION["adminUserId"][2];
+      $sql = "SELECT `id`, `firstName`, `lastName` FROM `Proj2Advisors` WHERE `Username` = '$User'";
+      $rs = $COMMON->executeQuery($sql, "Advising Appointments");
+      $row = mysql_fetch_row($rs);
+      $id = $row[0];
+      $FirstName = $row[1];
+      $LastName = $row[2];
 		
 		// print schedule for the user
 			echo("<h2>Schedule for $FirstName $LastName<br>$date</h2>");

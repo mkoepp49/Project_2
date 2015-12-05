@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION['db'] = 1;
 ?>
 
 <html lang="en">

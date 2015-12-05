@@ -17,7 +17,7 @@ $COMMON = new Common($debug);
     }
     </script>
 	<!-- Link to the reference of the css file contained in the css folder -->
-<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+<link rel='stylesheet' type='text/css' href='../css/AdminSearchApp.css'/>
   </head>
   <body>
     <div id="login">

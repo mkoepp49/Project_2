@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$debug = false; // changed
+$debug = true; // changed
 
 if($debug) { echo("Session variables-> ".var_dump($_SESSION)); }
 
@@ -24,16 +24,20 @@ $_SESSION["PassCon"] = false;
 	<?php
 
 	// someone landed this page by accident
-	if(!isset($_SESSION["adminUserId"][3])) 
+	if(!isset($_SESSION["UserN"])) 
 	{
 		return;
 	}		
 // grab the user from the database query
-		$User = $_SESSION["adminUserId"][3];
-		$Pass = $_SESSION["adminUserId"][4];
+		$User = $_SESSION["UserN"];
+		$Pass = $_SESSION["PassW"];
+		$sql = "SELECT `firstName` FROM `Proj2Advisors` 
+			WHERE `Username` = '$User' 
+			and `Password` = '$Pass'";
 
-		// print first name
-		echo $_SESSION["adminUserId"][1];
+		$rs = $COMMON->executeQuery($sql, $_SERVER["AdminUI"]);
+		$row = mysql_fetch_row($rs);
+		echo $row[0];
 	?>
 	</h2>
 	  <!-- add the various option buttons to the user -->

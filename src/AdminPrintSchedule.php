@@ -30,7 +30,7 @@ session_start();
 	         </div>
 
 	         <div class="field">
-			 <!-- Whether the user has a -->
+			 <!-- Whether the user has a 
         		<label for="Type">Type of Appointment</label>
             <select id="type" name = "type">
 					<option>Both</option>

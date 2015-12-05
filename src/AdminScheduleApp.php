@@ -16,7 +16,7 @@ session_start();
 	<h1>Schedule Appointments</h1>
 	<h2>Select advising type</h2><br>
 	
-	<!-- // Process a form action with either an Individual or group appt  -->
+	// Process a form action with either an Individual or group appt 
 	<form method="post" action="AdminProcessSchedule.php">
 	<div class="nextButton">
 		<input type="submit" name="next" class="button large go" value="Individual">
@@ -26,7 +26,7 @@ session_start();
         </div>
 	</div>
 		</form>
-		<!-- // go back home to Admin UI  -->
+		// go back home to Admin UI 
 		<form method="link" action="AdminUI.php">
 		<input type="submit" name="home" class="button large" value="Cancel">
 		</form>
