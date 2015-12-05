@@ -15,17 +15,17 @@ session_start();
         <div class="top">
 		<h2>Hello
 		<?php
-			include ('../Data.php');
-			echo $firstn;
+			// Print First Name
+			echo $_SESSION["userId"][1];
 		?>
-		</h2>
+        </h2>
 	    <div class="selections">
 		<!-- These will go through processing before performing user desired action 
 		     based on which option the student chooses from the buttons listed-->
 		<form action="StudProcessHome.php" method="post" name="Home">
 	    <?php
 			$debug = false;
-			include_once('../CommonMethods.php');
+			include('../CommonMethods.php');
 			$COMMON = new Common($debug);
 			
 			$_SESSION["studExist"] = false; // note note note note note note note note note note
@@ -33,6 +33,8 @@ session_start();
 			$adminCancel = false;
 			$noApp = false;
 			
+			// selects studentId from DB
+			$studid = $_SESSION["userId"][3];
 
 			// fetch the specific student from the DB based on the 
 			$sql = "select * from Proj2Students where `StudentID` = '$studid'";
